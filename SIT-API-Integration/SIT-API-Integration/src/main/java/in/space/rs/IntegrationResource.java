@@ -1,7 +1,6 @@
 package in.space.rs;
 
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,13 +12,13 @@ import in.space.common.ERPConstant;
 import in.space.service.IntegrationService;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping(value = ERPConstant.API_VERSION_ONE)
 public class IntegrationResource {
 				
 	@Autowired
 	private IntegrationService integrationService;
 	
-	@GetMapping("/jsonplace/get")
+	@GetMapping(value = ERPConstant.JSON_PLACE_GET)
 	public List<JsonPlaceHolder> jsonPlaceHolderGET(){
 		return integrationService.jsonPlaceHolderGET();
 	}
