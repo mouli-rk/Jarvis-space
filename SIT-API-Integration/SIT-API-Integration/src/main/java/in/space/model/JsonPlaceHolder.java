@@ -8,7 +8,6 @@ public class JsonPlaceHolder{
     
 	public JsonPlaceHolder() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public JsonPlaceHolder(int userId, int id, String title, String body) {
 		super();
